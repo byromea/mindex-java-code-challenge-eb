@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.mindex.challenge.service.impl.EmployeeServiceImplTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-09-12T16:38:18" hostname="LAPTOP-ABLEI8K" time="0.11">
+  <properties/>
+  <testcase name="givenEmployeeId_whenReportingStructureCalledOfIC_thenReturnReportingStructureWithNoCounts" classname="com.mindex.challenge.service.impl.EmployeeServiceImplTest" time="0.025"/>
+  <testcase name="givenInvalidEmployee_whenFindingReportingStructureForInvalidEmployeeId_thenThrowError" classname="com.mindex.challenge.service.impl.EmployeeServiceImplTest" time="0.014"/>
+  <testcase name="givenEmployeeId_whenReportingStructureCalledOfMidManager_thenReturnReportingStructureWithAllCounts" classname="com.mindex.challenge.service.impl.EmployeeServiceImplTest" time="0.017"/>
+  <testcase name="testCreateReadUpdate" classname="com.mindex.challenge.service.impl.EmployeeServiceImplTest" time="0.03"/>
+  <testcase name="givenEmployeeId_whenReportingStructureCalledOfTopManager_thenReturnReportingStructureWithAllCounts" classname="com.mindex.challenge.service.impl.EmployeeServiceImplTest" time="0.018"/>
+  <system-out><![CDATA[2023-09-12 12:38:18.656  INFO 10968 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.mindex.challenge.service.impl.EmployeeServiceImplTest], using SpringBootContextLoader
+2023-09-12 12:38:18.657  INFO 10968 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.mindex.challenge.service.impl.EmployeeServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-09-12 12:38:18.658  INFO 10968 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mindex.challenge.service.impl.EmployeeServiceImplTest]: EmployeeServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-09-12 12:38:18.660  INFO 10968 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mindex.challenge.ChallengeApplication for test class com.mindex.challenge.service.impl.EmployeeServiceImplTest
+2023-09-12 12:38:18.662  INFO 10968 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-09-12 12:38:18.663  INFO 10968 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@142ea7e9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1a20473f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@57961440, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@421e462d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@236ea068, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3bef1285, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5cbc35ac, org.springframework.test.context.event.EventPublishingTestExecutionListener@6ca33f38, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3a18bf24, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7920e9d8, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@448cb205, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@31a31f53, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4e3d67dc]
+2023-09-12 12:38:18.679 DEBUG 10968 --- [o-auto-1-exec-6] c.m.c.controller.EmployeeController      : Getting employee reporting structure for employee id [62c1084e-6e34-4630-93fd-9153afb65309]
+2023-09-12 12:38:18.679 DEBUG 10968 --- [o-auto-1-exec-6] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [62c1084e-6e34-4630-93fd-9153afb65309]
+2023-09-12 12:38:18.682 DEBUG 10968 --- [o-auto-1-exec-6] c.m.c.service.impl.EmployeeServiceImpl   : Getting reporting structure for employee [com.mindex.challenge.data.Employee@92efa83]
+2023-09-12 12:38:18.699 DEBUG 10968 --- [o-auto-1-exec-7] c.m.c.controller.EmployeeController      : Getting employee reporting structure for employee id [UnknownUser]
+2023-09-12 12:38:18.700 DEBUG 10968 --- [o-auto-1-exec-7] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [UnknownUser]
+2023-09-12 12:38:18.703 ERROR 10968 --- [o-auto-1-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: Invalid employeeId: UnknownUser] with root cause
+
+java.lang.RuntimeException: Invalid employeeId: UnknownUser
+	at com.mindex.challenge.service.impl.EmployeeServiceImpl.read(EmployeeServiceImpl.java:40) ~[main/:na]
+	at com.mindex.challenge.controller.EmployeeController.getReportingtructure(EmployeeController.java:48) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-09-12 12:38:18.715 DEBUG 10968 --- [o-auto-1-exec-8] c.m.c.controller.EmployeeController      : Getting employee reporting structure for employee id [03aa1462-ffa9-4978-901b-7c001562cf6f]
+2023-09-12 12:38:18.717 DEBUG 10968 --- [o-auto-1-exec-8] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [03aa1462-ffa9-4978-901b-7c001562cf6f]
+2023-09-12 12:38:18.719 DEBUG 10968 --- [o-auto-1-exec-8] c.m.c.service.impl.EmployeeServiceImpl   : Getting reporting structure for employee [com.mindex.challenge.data.Employee@61ca017e]
+2023-09-12 12:38:18.734 DEBUG 10968 --- [o-auto-1-exec-9] c.m.c.controller.EmployeeController      : Received employee create request for [com.mindex.challenge.data.Employee@26742760]
+2023-09-12 12:38:18.734 DEBUG 10968 --- [o-auto-1-exec-9] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee [com.mindex.challenge.data.Employee@26742760]
+2023-09-12 12:38:18.741 DEBUG 10968 --- [-auto-1-exec-10] c.m.c.controller.EmployeeController      : Received employee create request for id [60f5ed70-f86a-4868-9878-6ed56f8d79f5]
+2023-09-12 12:38:18.741 DEBUG 10968 --- [-auto-1-exec-10] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [60f5ed70-f86a-4868-9878-6ed56f8d79f5]
+2023-09-12 12:38:18.751 DEBUG 10968 --- [o-auto-1-exec-1] c.m.c.controller.EmployeeController      : Received employee create request for id [60f5ed70-f86a-4868-9878-6ed56f8d79f5] and employee [com.mindex.challenge.data.Employee@383d8d61]
+2023-09-12 12:38:18.751 DEBUG 10968 --- [o-auto-1-exec-1] c.m.c.service.impl.EmployeeServiceImpl   : Updating employee [com.mindex.challenge.data.Employee@383d8d61]
+2023-09-12 12:38:18.769 DEBUG 10968 --- [o-auto-1-exec-3] c.m.c.controller.EmployeeController      : Getting employee reporting structure for employee id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2023-09-12 12:38:18.769 DEBUG 10968 --- [o-auto-1-exec-3] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2023-09-12 12:38:18.771 DEBUG 10968 --- [o-auto-1-exec-3] c.m.c.service.impl.EmployeeServiceImpl   : Getting reporting structure for employee [com.mindex.challenge.data.Employee@50da592c]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
